@@ -1,15 +1,17 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import { HomeView } from '../view/HomeView'
 import { PageNotFound } from '../view/PageNotFound'
 
-export const Routes = () => {
+export const Routes = (props) => {
     return (       
         <Router>
-            <switch>
+            {props.children}
+            <Switch>
                 <Route exact path='/home' component={HomeView} />
                 <Route component={PageNotFound} />
-            </switch>
+            </Switch>
         </Router>
+        
     )
 }
