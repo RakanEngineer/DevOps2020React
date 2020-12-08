@@ -12,7 +12,7 @@ export const SignInView  = () => {
     return (
         <div>
             <h2>This is where the users wil be logging in</h2>
-            <h1>{authenticatedUser}</h1>
+            <h1>{username}</h1>
             {/* <button onClick={()=> setusername(username + "2020")}>Update</button> */}
 
             <form>
