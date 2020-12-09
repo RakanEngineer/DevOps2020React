@@ -1,24 +1,17 @@
 .navigationBarWrapper {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
   background-color: teal;
   padding: 1%;
 }
 
 .logotype {
   width: 100px;
+  cursor: pointer;
 }
-.navigationBarWrapper {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  background-color: rgb(26, 209, 241);
-  padding: 1%;
-  }
-  .logotype {
-  width: 100px;
+.signIn {
   cursor: pointer;
-  }
-  .signIn {
-  cursor: pointer;
-  grid-column: 8/11;
+  grid-column: 9/11;
   justify-self: center;
   align-self: center;
-  }
+}
