@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import './NavigationBar.css'
+import './NavigationBar.css'
 import Logotype from '../../shared/images/logotype.svg'
 import { useHistory} from 'react-router-dom'
 import RoutingPath from '../../routes/RoutingPath'
@@ -8,7 +8,7 @@ import {Profile} from '../profile/Profile'
 
 export const NavigationBar = () => {
     const history = useHistory()
-    const[authenticatedUser, setAuthenticatedUser]= useContext(UserContext)
+    const[authenticatedUser, ]= useContext(UserContext)
 
     const displayUserIfAuthenticated = () => {
         if(authenticatedUser) {
@@ -28,8 +28,8 @@ export const NavigationBar = () => {
     return (
         <div className="navigationBarWrapper">
             <img onClick={()=> history.push(RoutingPath.HomeView)} className="logotype" src={Logotype} alt= {"Error..."}></img>            
+             
             {/* <span className="signIn" onClick={() => history.push(RoutingPath.SignInView)}>Sign in:</span> */}
-            
             {displayUserIfAuthenticated()}
         </div>
     )
